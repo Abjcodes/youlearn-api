@@ -3,9 +3,10 @@ import { INote, INoteDocument, INoteModel } from "../interfaces/noteInterface";
 
 const NoteSchema: Schema<INoteDocument> = new mongoose.Schema(
   {
-    user_email: {
-      type: String,
+    user: {
+      type: mongoose.Schema.Types.ObjectId,
       required: true,
+      ref: "User",
     },
     video_id: {
       type: String,

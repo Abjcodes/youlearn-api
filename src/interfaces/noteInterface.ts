@@ -1,7 +1,7 @@
-import { Document, Model } from "mongoose";
+import { Document, Model, Types } from "mongoose";
 
 export interface INote {
-  user_email: string;
+  user: Types.ObjectId;
   video_id: string;
   notes: string;
   video_title: string;
